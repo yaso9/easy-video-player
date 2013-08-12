@@ -1,7 +1,7 @@
 <?php
 /*
 Plugin Name: Easy Video Player
-Version: 1.0.1
+Version: 1.0.2
 Plugin URI: http://easywpguide.wordpress.com/?p=25
 Author: naa986
 Author URI: http://easywpguide.wordpress.com/
@@ -13,7 +13,7 @@ if(!class_exists('EASY_VIDEO_PLAYER'))
 {
 	class EASY_VIDEO_PLAYER 
 	{
-		var $plugin_version = '1.0.1';
+		var $plugin_version = '1.0.2';
 		function __construct() 
 		{
 			define('EASY_VIDEO_PLAYER_VERSION', $this->plugin_version);
@@ -117,13 +117,36 @@ function evp_embed_video_handler($atts)
 {
 	extract(shortcode_atts(array(
             'url' => '',
+            'width' => '',
+            'height' => '',
+            'ratio' => '0.417',
+            'autoplay' => 'false',
 	), $atts));
+    if($autoplay=="true"){
+        $autoplay = " autoplay";
+    }
+    else{
+        $autoplay = "";
+    }
+    $player = "fp".uniqid();
+    $styles = "";
+    if(!empty($width) && !empty($height)){
+        $styles = <<<EOT
+        <style>
+            #$player {
+                width: {$width}px;
+                height: {$height}px;
+            }
+        </style>
+EOT;
+    }
 	$output = <<<EOT
-        <div data-ratio="0.417" class="flowplayer">
-        <video>
-           <source type="video/mp4" src="$url"/>
-        </video>
+        <div id="$player" data-ratio="$ratio" class="flowplayer">
+            <video{$autoplay}>
+               <source type="video/mp4" src="$url"/>
+            </video>
         </div>
+        $styles
 EOT;
 	return $output; 
 }

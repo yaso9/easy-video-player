@@ -3,8 +3,8 @@ Contributors: naa986
 Donate link: http://easywpguide.wordpress.com/
 Tags: video, wpvideo, flash, html5, iPad, iphone, ipod, mobile, playlists, embed video, flowplayer, video html5, flash player, player, video player
 Requires at least: 3.0.1
-Tested up to: 3.5.1
-Stable tag: 1.0.1
+Tested up to: 3.6
+Stable tag: 1.0.2
 License: GPLv3 or later
 License URI: http://www.gnu.org/licenses/gpl-3.0.html
 
@@ -34,6 +34,24 @@ Now it's time to finally embed a video shortcode. To do this create a new post/p
 
 here, url is a shortcode parameter that you need to replace the actual URL of the video file.
 
+*Video Autoplay*
+
+If you want a particular video to start playing when the page loads you can set the "autoplay" option to "true":
+
+`[evp_embed_video url="http://example.com/wp-content/uploads/videos/myvid.mp4" autoplay="true"]`
+
+*Control Size*
+
+Many users don't care if the videos are not responsive, and therefore want to control the player size. You can easily do so by specifying a width and height for your video:
+
+`[evp_embed_video url="http://example.com/wp-content/uploads/videos/myvid.mp4" width="500" height="400"]`
+
+*Control Player Ratio*
+
+The player ratio is set to "0.417" by default. But you can override it by specifying a different ratio in the shortcode:
+
+`[evp_embed_video url="http://example.com/wp-content/uploads/videos/myvid.mp4" ratio="0.345"]`
+
 For detailed documentation please visit the [Easy Video Player](http://easywpguide.wordpress.com/?p=25) plugin page
 
 
@@ -55,11 +73,27 @@ Yes.
 
 Yes.
 
+= Can I autoplay a video? =
+
+Yes.
+
+= Can I embed responsive videos using this plugin? =
+
+Yes.
+
 == Screenshots ==
 
 For screenshots please visit the [Easy Video Player](http://easywpguide.wordpress.com/?p=25) plugin page
 
+== Upgrade Notice ==
+none
+
 == Changelog ==
+
+= 1.0.2 =
+* The plugin can now automatically start playing a video
+* The player can be resized using a specific width and height
+* The ratio of each video can be customized
 
 = 1.0.1 =
 * First commit
