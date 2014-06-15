@@ -1,7 +1,7 @@
 <?php
 /*
 Plugin Name: Easy Video Player
-Version: 1.0.2
+Version: 1.0.3
 Plugin URI: http://easywpguide.wordpress.com/?p=25
 Author: naa986
 Author URI: http://easywpguide.wordpress.com/
@@ -13,7 +13,7 @@ if(!class_exists('EASY_VIDEO_PLAYER'))
 {
 	class EASY_VIDEO_PLAYER 
 	{
-		var $plugin_version = '1.0.2';
+		var $plugin_version = '1.0.3';
 		function __construct() 
 		{
 			define('EASY_VIDEO_PLAYER_VERSION', $this->plugin_version);
