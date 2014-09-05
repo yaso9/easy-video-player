@@ -3,7 +3,7 @@ Contributors: naa986
 Donate link: http://easywpguide.wordpress.com/
 Tags: video, wpvideo, flash, html5, iPad, iphone, ipod, mobile, playlists, embed video, flowplayer, video html5, flash player, player, video player
 Requires at least: 3.0.1
-Tested up to: 3.9
+Tested up to: 4.0
 Stable tag: 1.0.3
 License: GPLv3 or later
 License URI: http://www.gnu.org/licenses/gpl-3.0.html
