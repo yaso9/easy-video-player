@@ -1,6 +1,6 @@
 === Easy Video Player ===
 Contributors: naa986
-Donate link: http://easywpguide.wordpress.com/
+Donate link: http://noorsplugin.com/
 Tags: video, wpvideo, flash, html5, iPad, iphone, ipod, mobile, playlists, embed video, flowplayer, video html5, flash player, player, video player
 Requires at least: 3.0.1
 Tested up to: 4.0
@@ -52,7 +52,7 @@ The player ratio is set to "0.417" by default. But you can override it by specif
 
 `[evp_embed_video url="http://example.com/wp-content/uploads/videos/myvid.mp4" ratio="0.345"]`
 
-For detailed documentation please visit the [Easy Video Player](http://easywpguide.wordpress.com/?p=25) plugin page
+For detailed documentation please visit the [Easy Video Player](http://noorsplugin.com/wordpress-video-plugin/) plugin page
 
 
 == Installation ==
@@ -83,7 +83,7 @@ Yes.
 
 == Screenshots ==
 
-For screenshots please visit the [Easy Video Player](http://easywpguide.wordpress.com/?p=25) plugin page
+For screenshots please visit the [Easy Video Player](http://noorsplugin.com/wordpress-video-plugin/) plugin page
 
 == Upgrade Notice ==
 none

@@ -2,9 +2,9 @@
 /*
 Plugin Name: Easy Video Player
 Version: 1.0.3
-Plugin URI: http://easywpguide.wordpress.com/?p=25
+Plugin URI: http://noorsplugin.com/wordpress-video-plugin/
 Author: naa986
-Author URI: http://easywpguide.wordpress.com/
+Author URI: http://noorsplugin.com/
 Description: Easily embed videos into your WordPress blog
 */
 
@@ -66,7 +66,7 @@ if(!class_exists('EASY_VIDEO_PLAYER'))
                         <div class="postbox">
 			<h3><label for="title">Setup Guide</label></h3>
 			<div class="inside">		
-                            <p>For detailed documentation please visit the plugin homepage <a href="http://easywpguide.wordpress.com/?p=25" target="_blank">here</a></p>
+                            <p>For detailed documentation please visit the plugin homepage <a href="http://noorsplugin.com/wordpress-video-plugin/" target="_blank">here</a></p>
 			</div></div>
 			<div class="postbox">
 			<h3><label for="title">General Settings</label></h3>
