@@ -4,7 +4,7 @@ Donate link: http://noorsplugin.com/
 Tags: video, wpvideo, flash, html5, iPad, iphone, ipod, mobile, playlists, embed video, flowplayer, video html5, flash player, player, video player
 Requires at least: 3.0.1
 Tested up to: 4.0
-Stable tag: 1.0.3
+Stable tag: 1.0.4
 License: GPLv3 or later
 License URI: http://www.gnu.org/licenses/gpl-3.0.html
 
@@ -19,6 +19,7 @@ Easy Video Player is a user-friendly WordPress plugin to showcase your videos. Y
 * Embed MP4 videos into your blog.
 * Embed responsive videos for a better user experience while viewing from a mobile device.
 * Embed HTML5 videos which are compatible with all major browsers.
+* Embed videos with poster images.
 
 = Easy Video Player Plugin Usage =
 
@@ -42,9 +43,11 @@ If you want a particular video to start playing when the page loads you can set 
 
 *Control Size*
 
-Many users don't care if the videos are not responsive, and therefore want to control the player size. You can easily do so by specifying a width and height for your video:
+By default, the player takes up the full width of the content area. You can easily control the size by specifying a width for it:
 
-`[evp_embed_video url="http://example.com/wp-content/uploads/videos/myvid.mp4" width="500" height="400"]`
+`[evp_embed_video url="http://example.com/wp-content/uploads/videos/myvid.mp4" width="500"]`
+
+The height will be automatically determined based on the ratio (please see the "Control Player Ratio section" for details).
 
 *Control Player Ratio*
 
@@ -89,6 +92,10 @@ For screenshots please visit the [Easy Video Player](http://noorsplugin.com/word
 none
 
 == Changelog ==
+
+= 1.0.4 =
+* Easy video player is now compatible with WordPress 4.0
+* Added a new parameter in the shortcode to accept poster image for a video
 
 = 1.0.3 =
 * Easy video player is now compatible with WordPress 3.9

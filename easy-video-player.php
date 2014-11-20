@@ -1,7 +1,7 @@
 <?php
 /*
 Plugin Name: Easy Video Player
-Version: 1.0.3
+Version: 1.0.4
 Plugin URI: http://noorsplugin.com/wordpress-video-plugin/
 Author: naa986
 Author URI: http://noorsplugin.com/
@@ -13,7 +13,7 @@ if(!class_exists('EASY_VIDEO_PLAYER'))
 {
 	class EASY_VIDEO_PLAYER 
 	{
-		var $plugin_version = '1.0.3';
+		var $plugin_version = '1.0.4';
 		function __construct() 
 		{
 			define('EASY_VIDEO_PLAYER_VERSION', $this->plugin_version);
@@ -121,6 +121,7 @@ function evp_embed_video_handler($atts)
             'height' => '',
             'ratio' => '0.417',
             'autoplay' => 'false',
+            'poster' => '',
 	), $atts));
     if($autoplay=="true"){
         $autoplay = " autoplay";
@@ -129,17 +130,25 @@ function evp_embed_video_handler($atts)
         $autoplay = "";
     }
     $player = "fp".uniqid();
-    $styles = "";
-    if(!empty($width) && !empty($height)){
-        $styles = <<<EOT
-        <style>
-            #$player {
-                width: {$width}px;
-                height: {$height}px;
-            }
-        </style>
-EOT;
+    $color = '';
+    if(!empty($poster)){
+        $color = 'background: #000000 url('.$poster.');background-size: 100% auto;';
     }
+    else{
+        $color = 'background-color: #000000;';
+    }
+    $size_attr = "";
+    if(!empty($width)){
+        $size_attr = "max-width: {$width}px;max-height: auto;";
+    }
+    $styles = <<<EOT
+    <style>
+        #$player {
+            $size_attr
+            $color    
+        }
+    </style>
+EOT;
 	$output = <<<EOT
         <div id="$player" data-ratio="$ratio" class="flowplayer">
             <video{$autoplay}>
