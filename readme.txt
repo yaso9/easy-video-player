@@ -4,7 +4,7 @@ Donate link: http://noorsplugin.com/
 Tags: video, wpvideo, flash, html5, iPad, iphone, ipod, mobile, playlists, embed video, flowplayer, video html5, flash player, player, video player
 Requires at least: 3.0.1
 Tested up to: 4.1
-Stable tag: 1.0.4
+Stable tag: 1.0.5
 License: GPLv3 or later
 License URI: http://www.gnu.org/licenses/gpl-3.0.html
 
@@ -92,6 +92,9 @@ For screenshots please visit the [Easy Video Player](http://noorsplugin.com/word
 none
 
 == Changelog ==
+
+= 1.0.5 =
+* Video shortcode can now be embedded in a text widget
 
 = 1.0.4 =
 * Easy video player is now compatible with WordPress 4.0
