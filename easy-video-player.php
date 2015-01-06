@@ -1,7 +1,7 @@
 <?php
 /*
   Plugin Name: Easy Video Player
-  Version: 1.0.5
+  Version: 1.0.6
   Plugin URI: http://noorsplugin.com/wordpress-video-plugin/
   Author: naa986
   Author URI: http://noorsplugin.com/
@@ -15,7 +15,7 @@ if (!class_exists('EASY_VIDEO_PLAYER')) {
 
     class EASY_VIDEO_PLAYER {
 
-        var $plugin_version = '1.0.5';
+        var $plugin_version = '1.0.6';
 
         function __construct() {
             define('EASY_VIDEO_PLAYER_VERSION', $this->plugin_version);
@@ -28,6 +28,7 @@ if (!class_exists('EASY_VIDEO_PLAYER')) {
             }
             add_action('wp_enqueue_scripts', 'easy_video_player_enqueue_scripts');
             add_action('admin_menu', array(&$this, 'easy_video_player_add_options_menu'));
+            add_action('wp_head', 'easy_video_player_header');
             add_shortcode('evp_embed_video', 'evp_embed_video_handler');
             //allows shortcode execution in the widget, excerpt and content
             add_filter('widget_text', 'do_shortcode');
@@ -107,10 +108,22 @@ function easy_video_player_enqueue_scripts() {
         if ($enable_jquery) {
             wp_enqueue_script('jquery');
         }
-        wp_register_script('flowplayer-js', $plugin_url . '/lib/flowplayer.js');
+        wp_register_script('flowplayer-js', $plugin_url . '/lib/flowplayer.min.js');
         wp_enqueue_script('flowplayer-js');
-        wp_register_style('flowplayer-css', $plugin_url . '/lib/minimalist.css');
+        wp_register_style('flowplayer-css', $plugin_url . '/lib/skin/minimalist.css');
         wp_enqueue_style('flowplayer-css');
+    }
+}
+
+function easy_video_player_header() {
+    if (!is_admin()) {
+        $fp_config = '<!-- This content is generated with the Easy Video Player plugin v'.EASY_VIDEO_PLAYER_VERSION.' - http://noorsplugin.com/wordpress-video-plugin/ -->';
+        $fp_config .= '<script>';
+        $fp_config .= 'flowplayer.conf.embed = false;';
+        $fp_config .= 'flowplayer.conf.keyboard = false;';
+        $fp_config .= '</script>';
+        $fp_config .= '<!-- Easy Video Player plugin -->';
+        echo $fp_config;
     }
 }
 
