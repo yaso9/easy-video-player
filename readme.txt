@@ -94,7 +94,7 @@ Yes.
 
 == Screenshots ==
 
-For screenshots please visit the [Easy Video Player](http://noorsplugin.com/wordpress-video-plugin/) plugin page
+1. Easy Video Player Demo
 
 == Upgrade Notice ==
 none
