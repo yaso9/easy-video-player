@@ -4,7 +4,7 @@ Donate link: http://noorsplugin.com/
 Tags: video, wpvideo, flash, html5, iPad, iphone, ipod, mobile, playlists, embed video, flowplayer, video html5, flash player, player, video player
 Requires at least: 3.0.1
 Tested up to: 4.1
-Stable tag: 1.0.6
+Stable tag: 1.0.7
 License: GPLv3 or later
 License URI: http://www.gnu.org/licenses/gpl-3.0.html
 
@@ -20,6 +20,8 @@ Easy Video Player is a user-friendly WordPress plugin to showcase your videos. Y
 * Embed responsive videos for a better user experience while viewing from a mobile device.
 * Embed HTML5 videos which are compatible with all major browsers.
 * Embed videos with poster images.
+* Customize the video player using modifier classes
+* Embed videos using three different skins
 
 = Easy Video Player Plugin Usage =
 
@@ -54,6 +56,12 @@ The height will be automatically determined based on the ratio (please see the "
 The player ratio is set to "0.417" by default. But you can override it by specifying a different ratio in the shortcode:
 
 `[evp_embed_video url="http://example.com/wp-content/uploads/videos/myvid.mp4" ratio="0.345"]`
+
+*Control Player Skin*
+
+By default, the player uses the "minimalist" skin. But you can override it by specifying a different skin in the shortcode:
+
+`[evp_embed_video url="http://example.com/wp-content/uploads/videos/myvid.mp4" class="functional"]`
 
 For detailed documentation please visit the [Easy Video Player](http://noorsplugin.com/wordpress-video-plugin/) plugin page
 
@@ -92,6 +100,9 @@ For screenshots please visit the [Easy Video Player](http://noorsplugin.com/word
 none
 
 == Changelog ==
+
+= 1.0.7 =
+* Video shortcode now accepts custom class names which can be used to customize the player
 
 = 1.0.6 =
 * Updated flowplayer library to version 5.5.2
