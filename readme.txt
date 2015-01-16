@@ -65,6 +65,10 @@ By default, the player uses the "minimalist" skin. But you can override it by sp
 
 For detailed documentation please visit the [Easy Video Player](http://noorsplugin.com/wordpress-video-plugin/) plugin page
 
+= Recommended Reading =
+
+* Easy Video Player [Documentation](http://noorsplugin.com/wordpress-video-plugin/)
+* My Other [Free WordPress Plugins](http://noorsplugin.com/wordpress-plugins/)
 
 == Installation ==
 
