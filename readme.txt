@@ -4,7 +4,7 @@ Donate link: http://noorsplugin.com/
 Tags: video, wpvideo, flash, html5, iPad, iphone, ipod, mobile, playlists, embed video, flowplayer, video html5, flash player, player, video player
 Requires at least: 3.0.1
 Tested up to: 4.2
-Stable tag: 1.0.7
+Stable tag: 1.0.8
 License: GPLv3 or later
 License URI: http://www.gnu.org/licenses/gpl-3.0.html
 
@@ -63,6 +63,12 @@ By default, the player uses the "minimalist" skin. But you can override it by sp
 
 `[evp_embed_video url="http://example.com/wp-content/uploads/videos/myvid.mp4" class="functional"]`
 
+*Video Loop*
+
+If you want a particular video to start playing again when it ends you can set the "loop" option to "true":
+
+`[evp_embed_video url="http://example.com/wp-content/uploads/videos/myvid.mp4" loop="true"]`
+
 For detailed documentation please visit the [Easy Video Player](http://noorsplugin.com/wordpress-video-plugin/) plugin page
 
 = Recommended Reading =
@@ -104,6 +110,9 @@ Yes.
 none
 
 == Changelog ==
+
+= 1.0.8 =
+* Added a new shortcode parameter "loop" to start playback again from the beginning when the video ends
 
 = 1.0.7 =
 * Video shortcode now accepts custom class names which can be used to customize the player

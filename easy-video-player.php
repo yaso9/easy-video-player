@@ -1,7 +1,7 @@
 <?php
 /*
   Plugin Name: Easy Video Player
-  Version: 1.0.7
+  Version: 1.0.8
   Plugin URI: http://noorsplugin.com/wordpress-video-plugin/
   Author: naa986
   Author URI: http://noorsplugin.com/
@@ -15,7 +15,7 @@ if (!class_exists('EASY_VIDEO_PLAYER')) {
 
     class EASY_VIDEO_PLAYER {
 
-        var $plugin_version = '1.0.7';
+        var $plugin_version = '1.0.8';
 
         function __construct() {
             define('EASY_VIDEO_PLAYER_VERSION', $this->plugin_version);
@@ -135,12 +135,19 @@ function evp_embed_video_handler($atts) {
                 'ratio' => '0.417',
                 'autoplay' => 'false',
                 'poster' => '',
+                'loop' => '',
                 'class' => '',
                     ), $atts));
     if ($autoplay == "true") {
         $autoplay = " autoplay";
     } else {
         $autoplay = "";
+    }
+    if ($loop == "true") {
+        $loop= " loop";
+    }
+    else{
+        $loop= "";
     }
     $player = "fp" . uniqid();
     $color = '';
@@ -178,7 +185,7 @@ EOT;
     
     $output = <<<EOT
         <div id="$player" data-ratio="$ratio" class="{$classes}">
-            <video{$autoplay}>
+            <video{$autoplay}{$loop}>
                <source type="video/mp4" src="$url"/>
             </video>
         </div>
