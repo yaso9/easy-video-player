@@ -1,7 +1,7 @@
 <?php
 /*
   Plugin Name: Easy Video Player
-  Version: 1.0.8
+  Version: 1.0.9
   Plugin URI: http://noorsplugin.com/wordpress-video-plugin/
   Author: naa986
   Author URI: http://noorsplugin.com/
@@ -15,7 +15,7 @@ if (!class_exists('EASY_VIDEO_PLAYER')) {
 
     class EASY_VIDEO_PLAYER {
 
-        var $plugin_version = '1.0.8';
+        var $plugin_version = '1.0.9';
 
         function __construct() {
             define('EASY_VIDEO_PLAYER_VERSION', $this->plugin_version);
