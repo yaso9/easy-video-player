@@ -1,7 +1,7 @@
 <?php
 /*
   Plugin Name: Easy Video Player
-  Version: 1.0.9
+  Version: 1.1.0
   Plugin URI: http://noorsplugin.com/wordpress-video-plugin/
   Author: naa986
   Author URI: http://noorsplugin.com/
@@ -15,7 +15,7 @@ if (!class_exists('EASY_VIDEO_PLAYER')) {
 
     class EASY_VIDEO_PLAYER {
 
-        var $plugin_version = '1.0.9';
+        var $plugin_version = '1.1.0';
 
         function __construct() {
             define('EASY_VIDEO_PLAYER_VERSION', $this->plugin_version);
@@ -137,7 +137,30 @@ function evp_embed_video_handler($atts) {
                 'poster' => '',
                 'loop' => '',
                 'class' => '',
+                'template' => '',
                     ), $atts));
+    //check if mediaelement template is specified
+    if($template=='mediaelement'){
+        $attr = array();
+        $attr['src'] = $url;
+        if(is_numeric($width)){
+            $attr['width'] = $width;
+        }
+        if(is_numeric($height)){
+            $attr['height'] = $height;
+        }
+        if ($autoplay == "true"){
+            $attr['autoplay'] = 'on';
+        }
+        if ($loop == "true"){
+            $attr['loop'] = 'on';
+        }
+        if (!empty($poster)){
+            $attr['poster'] = $poster;
+        }
+        return wp_video_shortcode($attr);
+    }
+    //
     if ($autoplay == "true") {
         $autoplay = " autoplay";
     } else {

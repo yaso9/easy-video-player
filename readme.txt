@@ -2,9 +2,9 @@
 Contributors: naa986
 Donate link: http://noorsplugin.com/
 Tags: video, wpvideo, flash, html5, iPad, iphone, ipod, mobile, playlists, embed video, flowplayer, video html5, flash player, player, video player
-Requires at least: 3.0.1
+Requires at least: 4.3
 Tested up to: 4.3
-Stable tag: 1.0.9
+Stable tag: 1.1.0
 License: GPLv3 or later
 License URI: http://www.gnu.org/licenses/gpl-3.0.html
 
@@ -16,12 +16,15 @@ Easy Video Player is a user-friendly WordPress plugin to showcase your videos. Y
 
 = Easy Video Player Features =
 
-* Embed MP4 videos into your blog.
-* Embed responsive videos for a better user experience while viewing from a mobile device.
-* Embed HTML5 videos which are compatible with all major browsers.
-* Embed videos with poster images.
+* Embed MP4 videos into your blog
+* Embed responsive videos for a better user experience while viewing from a mobile device
+* Embed HTML5 videos which are compatible with all major browsers
+* Embed videos with poster images
+* Embed videos with autoplay
+* Embed videos with loop
 * Customize the video player using modifier classes
 * Embed videos using three different skins
+* Embed videos using MediaElement player or default WordPress video player
 
 = Easy Video Player Plugin Usage =
 
@@ -69,6 +72,12 @@ If you want a particular video to start playing again when it ends you can set t
 
 `[evp_embed_video url="http://example.com/wp-content/uploads/videos/myvid.mp4" loop="true"]`
 
+*Video Player Template*
+
+If you want to use a different video player template you can specify it in the "template" parameter:
+
+`[evp_embed_video url="http://example.com/wp-content/uploads/videos/myvid.mp4" template="mediaelement"]`
+
 For detailed documentation please visit the [Easy Video Player](http://noorsplugin.com/wordpress-video-plugin/) plugin page
 
 = Recommended Reading =
@@ -105,11 +114,15 @@ Yes.
 == Screenshots ==
 
 1. Easy Video Player Demo
+2. Easy Video Player Demo With MediaElement Template
 
 == Upgrade Notice ==
 none
 
 == Changelog ==
+
+= 1.1.0 =
+* Added a new video player template - MediaElement
 
 = 1.0.9 =
 * Easy Video Player is now compatible with WordPress 4.3
