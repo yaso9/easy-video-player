@@ -198,21 +198,34 @@ function evp_embed_video_handler($atts) {
 
     $classes = implode(" ", $class_array);
     $styles = <<<EOT
-    <style>
-        #$player {
-            $size_attr
-            $color    
-        }
-    </style>
+        <style>
+            #$player {
+                $size_attr
+                $color
+                display: grid;
+            }
+        </style>
+EOT;
+
+    $js = <<<EOT
+        <script type="text/javascript">
+            var player = document.getElementById('$player').getElementsByTagName('video')[0].getElementsByTagName('source')[0]
+            var url = player.getAttribute('src')
+            url = window.atob(url)
+            player.setAttribute('src', url)
+            document.getElementById('$player').getElementsByTagName('video')[0].load();
+        </script>
 EOT;
     
+    $base64url = base64_encode($url);
     $output = <<<EOT
         <div id="$player" data-ratio="$ratio" class="{$classes}">
-            <video{$autoplay}{$loop}>
-               <source type="video/mp4" src="$url"/>
+            <video{$autoplay}{$loop} controls>
+               <source type="video/mp4" src="$base64url"/>
             </video>
         </div>
         $styles
+        $js
 EOT;
     return $output;
 }
