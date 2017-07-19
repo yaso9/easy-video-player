@@ -1,7 +1,7 @@
 <?php
 /*
   Plugin Name: Easy Video Player
-  Version: 1.1.0
+  Version: 2.0.0
   Plugin URI: http://noorsplugin.com/wordpress-video-plugin/
   Author: naa986
   Author URI: http://noorsplugin.com/
